@@ -1,0 +1,9 @@
+body
+    root
+        header
+        main
+            .movies
+            .sessions
+            .seats
+            .success
+        footer

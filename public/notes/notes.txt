@@ -1,0 +1,74 @@
+============================================================
+GET - MOVIES (list of objects)
+    
+https://mock-api.driven.com.br/api/v5/cineflex/movies
+
+[{
+    movie.id
+    movie.title
+    movie.posterURL
+    movie.overview
+    movie.releaseDate
+}]
+==============================================================
+==============================================================
+GET - MOVIE SESSIONS (list of objects)
+
+https://mock-api.driven.com.br/api/v5/cineflex/movies/ID_DO_FILME/showtimes
+
+[{
+    movie.id
+    movie.title
+    movie.posterURL
+    movie.overview
+    movie.releaseDate
+    movie.days[{
+                    day.id
+                    day.weekday
+                    day.date
+                    day.showtimes[{
+                                        showtime.name
+                                        showtime.id
+                                    }]
+                }]
+}]
+==============================================================
+==============================================================
+GET - SESSION SEATS (single object > list of objects)
+
+https://mock-api.driven.com.br/api/v5/cineflex/showtimes/ID_DA_SESSAO/seats
+
+{
+    showtime.id
+    showtime.name
+    showtime.day{
+                    day.id
+                    day.weekday
+                    day.date
+                }
+    showtime.movie{
+                        movie.id
+                        movie.title
+                        movie.posterURL
+                        movie.overview
+                        movie.releaseDate
+                    }
+    showtime.seats[{
+                        seat.id
+                        seat.name
+                        seat.isAvailable
+                    }]
+}
+==============================================================
+==============================================================
+POST - RESERVE SEATS
+
+https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many
+
+{
+    reserve.ids
+    reserve.name
+    reserve.cpf
+}
+
+
