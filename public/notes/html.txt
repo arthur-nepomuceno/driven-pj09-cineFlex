@@ -1,9 +1,11 @@
 body
     root
-        header
-        main
-            .movies
-            .sessions
-            .seats
-            .success
-        footer
+        Header
+        Main
+            Title
+            Content
+                .movies
+                .sessions
+                .seats
+                .success
+        Footer
