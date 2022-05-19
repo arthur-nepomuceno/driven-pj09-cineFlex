@@ -1,10 +1,10 @@
 ======================================================================================
+======================================================================================
 18/05/22 - 10:42
 QQQ - Quê Que eu Quero
-
+======================================================================================
 a) Quero pegar a lista da filmes da API e mostrar as capas deles na página
-b) Quero que cada item possa ser clicado e direcionado para as informações dos filmes
-
+======================================================================================
 QQP - Quê Que eu Preciso
 
 * (OK) Preciso criar um componente "Movies" para inserir cada "Movie" dentro deles
@@ -20,3 +20,35 @@ QQP - Quê Que eu Preciso
 
 * (OK) Usar o react-router-dom para determinar rotas
     - instalar o react-router-dom
+======================================================================================
+======================================================================================
+19/05/22
+Início: 12:00
+Fim: 13:33
+======================================================================================
+QQQ - Quê Que eu Quero
+
+a) Quero transformar os arquivos css em styled components
+b) Quero que cada item possa ser clicado e direcionado para as informações dos filmes
+======================================================================================
+QQP - Quê Que eu Preciso
+
+* (OK) Instalar o styled components no pasta raiz do projeto (onde estiver o package-json)
+    - entrar na pasta raiz pelo terminar e digitar "npm i styled-components"
+
+* (OK) Copiar o código dos arquivos css e passar para os respectivos componentes
+
+* (OK) Estabelecer o "Link to" para cada filme importado da API
+    - importar {Link} no local onde o componente Movie.js é importado (ok)
+    - usar o "Link to" para que cada filme carregado seja conectado com um Link
+    específico, que terá como parâmetro o id do filme (ok)
+    - especificar o "path" na rota (Route) que vai receber o caminho do filme clicado (ok)
+    - dentro do componente que vai receber a rota, importar o {useParams} (ok)
+    - usar o useParams para recerber esse "path" dentro do componente correspondente (ok)
+
+    Em resumo: 
+    - o filme envia a rota exata para o path, com um parâmetro que vai
+    depender do id do próprio filme. (ok)
+    - esse path leva para o próximo componente (ok)
+    - nesse próximo componente, eu recebo o path com o useParams (ok)
+======================================================================================

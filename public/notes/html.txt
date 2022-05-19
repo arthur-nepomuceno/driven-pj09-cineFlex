@@ -1,11 +1,14 @@
 body
     root
-        Header
-        Main
+        Top
+        Movies (ok)
+            Title (ok)
+            Main (ok)
+                Movie (x20) (ok)
+        Sessions (on)
             Title
-            Content
-                .movies
-                .sessions
-                .seats
-                .success
-        Footer
+            Main
+                Session
+        Seats
+        Success
+        Bottom

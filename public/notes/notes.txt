@@ -1,3 +1,8 @@
+PROJECT LIBS:
+
+npm i react-router-dom
+npm i axios
+npm i styled-components
 ============================================================
 GET - MOVIES (list of objects)
     

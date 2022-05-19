@@ -1,4 +1,4 @@
-import "../styles/Movies.css"
+import styled from "styled-components";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Title from "../components/Title";
@@ -8,15 +8,23 @@ export default function Movies(){
     const [movieList, setMovieList] = useState([])
     useEffect(() => {const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies`);
                     promise.then(element => {setMovieList(element.data)})}, [])
-
-    console.log(movieList)
      
     return(
         <>
             <Title title={`Selecione o filme`}/>
-            <main>
-                {movieList.map((movie, index) => <Movie key={index} src={movie.posterURL}/>)}   
-            </main>
+            <Main>
+                {movieList.map((movie, index) => <Movie key={index}
+                                                        id={movie.id}
+                                                        src={movie.posterURL}/>)}   
+            </Main>
         </>
     );
 }
+
+const Main = styled.main`
+    padding: 0 28px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+`
