@@ -1,4 +1,36 @@
 ======================================================================================
 20/05/22
-Início:
-Fim:
+Início: 03:30
+Fim: 05:02
+========== || ====================== || ========== || ========== || ========== || ====
+QQQ
+01. Criar o componente Seat.js. OK
+02. Importar esse componente dentro de Seats.js. OK
+03. Em Seats.js, realizar a requisição dos assentos usando o sessionID. -OK
+    - importar o axios -ok
+    - importar o useState para criar a variável de estado que vai receber
+    os dados da API -ok
+    - importar o useEffect para prevenir que um loopinh seja criado durante -ok
+    o processo de ciclo de vida do componente
+    - fazer a desestruturação dos parâmetros do path com o useParams -ok
+    - criar a variável de estado que vai receber os dados da API -ok
+    - invocar a função useEffect(()=>{}, []) -ok
+    - usar essa desestruturação junto com o axios para buscar as informações
+    dos assentos no próximo link de API -ok
+04. Exibir as informações conforme o layout fornecido.
+    - em Seat.js, criar o layout redondo que vai receber o número de cada assento -ok
+    - usar a função map junto com as informações dos assentos e o componente Seat
+    para fazer todos os assentos aparecerem de uma vez só -ok
+05. Escrever a função que seleciona um assento se ele estiver disponível.
+    - essa função vai estar no onClick={} de cada assento -ok
+    - essa função vai depender do valor de isAvailable -ok
+    - essa função vai depender de uma variável de estado que representa o assento
+    escolhido ou não escolhido, portanto, importar useState -ok
+    
+    PAUSA AQUI
+    RETORNO:
+    FIM:
+    - se isAvailable for "true", ao clicar no assento ele fica de fundo e borda azuis
+    e por isso o fundo e a borda também são variáveis de estado
+    - se o assento estiver azul, ao clicar de novo ele fica de fundo e borda cinzas
+    - se isAvailable for "false", ao clicar no assento aparece um alerta -ok

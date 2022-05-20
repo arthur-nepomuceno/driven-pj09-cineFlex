@@ -1,14 +1,18 @@
 body
     root
-        Top
-        Movies (ok)
-            Title (ok)
-            Main (ok)
-                Movie (x20) (ok)
-        Sessions (on)
-            Title
-            Main
-                Session
-        Seats
-        Success
-        Bottom
+        App
+            Top
+            Movies (ok)
+                Title (ok)
+                Main (ok)
+                    Movie (x20) (ok)
+            Sessions (ok)
+                Title (ok)
+                Main (ok)
+                    Session (x8) (ok)
+            Seats (on)
+                Title (ok)
+                Main (on)
+                    Seat (on)
+            Success
+            Bottom

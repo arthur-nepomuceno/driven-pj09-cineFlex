@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -14,8 +13,6 @@ export default function Sessions(){
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${movieID}/showtimes`)
         promise.then(element => {setSessions(element.data.days)})
     }, [])
-
-    console.log(sessions);
 
     return(
         <>
