@@ -46,14 +46,34 @@ QQQ
     porém se o assento estiver-disponível, a cor vai ser igual a variável de estado, 
     que mudará de acordo com a função de selecionar o assento
 =======================================================================================
-Início:
-Fim:
-Total:
+Início: 14:54
+Fim: 15:50
+Total: 0:56
 ========== || ====================== || ========== || ========== || ========== || ====
 QQQ
-06. Completar o layout mostrando a legenda dos assentos.
-    - criar uma div separada para incluir a legenda
-    - usar o componente de assento para criar as legendas
+06. Completar o layout mostrando a legenda dos assentos. -OK
+    - criar uma div separada para incluir a legenda -ok
+    - criar um componente separado para criar as legendas -ok
         - remover o nome
         - deixar a cor fixa
         - desabilitar a função do click
+
+    O DESAFIO FOI:
+    Manipular o componente do assento. Foi mais prático criar um componente
+    novo que recebe as cores como props em hexadecimal. Levei um bom tempo
+    tentando manipular o componente do assento até decidir mudar de caminho.
+=======================================================================================
+Início: 
+Fim: 
+Total: 
+========== || ====================== || ========== || ========== || ========== || =====
+QQQ
+07. Escrever na tela o formulário para o comprador.
+    - criar um componente separado para o formulário
+    - usar a tag form
+    - usar label + input
+    - aplicar o input controlado
+    - zerar os dados depois de apertar no botão de reservar assentos
+    - esse formulário precisará receber informações sobre os assentos
+    - também precisará organizar todos os dados em um objeto só
+    - esse objeto precisa ser enviado para um link de API

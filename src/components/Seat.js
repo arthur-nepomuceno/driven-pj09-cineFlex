@@ -2,35 +2,41 @@ import styled from "styled-components";
 import {useState} from "react";
 
 export default function Seat({name, isAvailable}){
+    const blue = `#8DD7CF`;
+    const bluer = `#45BDB0`;
+    const yellow  = `#FBE192`;
+    const yellower = '#F7C52B';
+    const gray = `#C3CFD9`;
+    const grayer = `#808F9D`;
 
     const[click, setClick] = useState(false)
-    const[background, setBackground] = useState(`#C3CFD9`);
-    const[border, setBorder] = useState(`#808F9D`) 
+    const[bgColor, setBgColor] = useState(gray);
+    const[bdColor, setBdColor] = useState(grayer); 
 
     function SelectSeat(){
         if(isAvailable === true && click === false){
             setClick(true);
-            setBackground(`#8DD7CF`);
-            setBorder(`#45BDB0`);
+            setBgColor(blue);
+            setBdColor(bluer);
         } else if(isAvailable === true && click === true){
             setClick(false);
-            setBackground(`#C3CFD9`);
-            setBorder(`#808F9D`);
+            setBgColor(gray);
+            setBdColor(grayer);
         } else if(isAvailable === false){
             alert("Esse assento não está disponível.")
         }
     }
 
     return(
-        <DIV background={isAvailable ? background : `#FBE192`} 
-             border={isAvailable ? border : '#F7C52B'} 
+        <Div background={isAvailable ? bgColor : yellow} 
+             border={isAvailable ? bdColor : yellower} 
              onClick={SelectSeat}>
             <p>{name}</p>
-        </DIV>
+        </Div>
     );
 }
 
-const DIV = styled.div`
+const Div = styled.div`
     width: 26px;
     height: 26px;
     margin: 0px 2px 14px 2px;
