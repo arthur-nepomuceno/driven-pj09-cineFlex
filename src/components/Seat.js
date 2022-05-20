@@ -4,17 +4,17 @@ import {useState} from "react";
 export default function Seat({name, isAvailable}){
 
     const[click, setClick] = useState(false)
-    const[color, setColor] = useState(`#C3CFD9`);
+    const[background, setBackground] = useState(`#C3CFD9`);
     const[border, setBorder] = useState(`#808F9D`) 
 
     function SelectSeat(){
         if(isAvailable === true && click === false){
             setClick(true);
-            setColor(`#8DD7CF`);
+            setBackground(`#8DD7CF`);
             setBorder(`#45BDB0`);
         } else if(isAvailable === true && click === true){
             setClick(false);
-            setColor(`#C3CFD9`);
+            setBackground(`#C3CFD9`);
             setBorder(`#808F9D`);
         } else if(isAvailable === false){
             alert("Esse assento não está disponível.")
@@ -22,7 +22,9 @@ export default function Seat({name, isAvailable}){
     }
 
     return(
-        <DIV color={isAvailable} border={isAvailable} onClick={SelectSeat}>
+        <DIV background={isAvailable ? background : `#FBE192`} 
+             border={isAvailable ? border : '#F7C52B'} 
+             onClick={SelectSeat}>
             <p>{name}</p>
         </DIV>
     );
@@ -33,8 +35,8 @@ const DIV = styled.div`
     height: 26px;
     margin: 0px 2px 14px 2px;
 
-    background: ${props => props.color ? `#C3CFD9`: `#FBE192`};
-    border: 1px solid ${props => props.border ? '#808F9D' : '#F7C52B'};
+    background: ${props => props.background};
+    border: 1px solid ${props => props.border};
     border-radius: 12px;
     
     display: flex;

@@ -1,7 +1,9 @@
 ======================================================================================
 20/05/22
+======================================================================================
 Início: 03:30
 Fim: 05:02
+Total: 1:32
 ========== || ====================== || ========== || ========== || ========== || ====
 QQQ
 01. Criar o componente Seat.js. OK
@@ -21,16 +23,37 @@ QQQ
     - em Seat.js, criar o layout redondo que vai receber o número de cada assento -ok
     - usar a função map junto com as informações dos assentos e o componente Seat
     para fazer todos os assentos aparecerem de uma vez só -ok
-05. Escrever a função que seleciona um assento se ele estiver disponível.
+05. Escrever a função que seleciona um assento se ele estiver disponível. -ok
     - essa função vai estar no onClick={} de cada assento -ok
     - essa função vai depender do valor de isAvailable -ok
     - essa função vai depender de uma variável de estado que representa o assento
     escolhido ou não escolhido, portanto, importar useState -ok
     
     PAUSA AQUI
-    RETORNO:
-    FIM:
+    RETORNO: 13:43
+    FIM: 13:58
+    Total: 0:15
+
     - se isAvailable for "true", ao clicar no assento ele fica de fundo e borda azuis
-    e por isso o fundo e a borda também são variáveis de estado
-    - se o assento estiver azul, ao clicar de novo ele fica de fundo e borda cinzas
+    e por isso o fundo e a borda também são variáveis de estado -ok
+    - se o assento estiver azul, ao clicar de novo ele fica de fundo e borda cinzas -ok
     - se isAvailable for "false", ao clicar no assento aparece um alerta -ok
+
+    SACADA:
+    - colocar tanto o fundo como a borda do assento como props pelo styled components
+    - na hora de definir esses valores dentro do JSX, usar o operador ternário para
+    informar que, se o assento não-estiver-disponível, a cor é fixa; 
+    porém se o assento estiver-disponível, a cor vai ser igual a variável de estado, 
+    que mudará de acordo com a função de selecionar o assento
+=======================================================================================
+Início:
+Fim:
+Total:
+========== || ====================== || ========== || ========== || ========== || ====
+QQQ
+06. Completar o layout mostrando a legenda dos assentos.
+    - criar uma div separada para incluir a legenda
+    - usar o componente de assento para criar as legendas
+        - remover o nome
+        - deixar a cor fixa
+        - desabilitar a função do click
