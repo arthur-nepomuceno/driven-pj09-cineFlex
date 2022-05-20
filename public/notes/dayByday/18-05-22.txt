@@ -1,0 +1,21 @@
+======================================================================================
+18/05/22 - 10:42
+QQQ - Quê Que eu Quero
+======================================================================================
+a) Quero pegar a lista da filmes da API e mostrar as capas deles na página
+======================================================================================
+QQP - Quê Que eu Preciso
+
+* (OK) Preciso criar um componente "Movies" para inserir cada "Movie" dentro deles
+
+* (OK) Preciso criar o componente "Movie"
+    - esse componente é basicamente a capa do filme exibida na tela,
+    com funcionalidades por trás
+
+* (OK) Fazer um requisição na API e tratar a resposta recebida
+    - instalar o axios
+
+* (OK) Usar a resposta tratada para exibir os dados que eu quero
+
+* (OK) Usar o react-router-dom para determinar rotas
+    - instalar o react-router-dom

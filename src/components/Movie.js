@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Movie({id, src}){
     return(
         <Figure>
-            <Link to={`/${id}/showtimes`}>
+            <Link to={`/sessions/${id}`}>
                 <img src={src} alt="movie cover"></img>
             </Link>
         </Figure>

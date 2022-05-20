@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import axios from "axios";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import Title from "../components/Title";
+import Main from "../components/Main";
 import Movie from "../components/Movie";
 
 export default function Movies(){
@@ -20,11 +20,3 @@ export default function Movies(){
         </>
     );
 }
-
-const Main = styled.main`
-    padding: 0 28px;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-`

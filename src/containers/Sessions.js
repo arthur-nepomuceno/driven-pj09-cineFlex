@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Title from "../components/Title";
 import Session from "../components/Session";
+import Main from "../components/Main"
 
 
 export default function Sessions(){
@@ -19,6 +20,12 @@ export default function Sessions(){
     return(
         <>
             <Title title={`Selecione o horário`}/>
+            <Main>
+                {sessions.map((session, index)=><Session key={index}
+                                                        weekday={session.weekday} 
+                                                        date={session.date}
+                                                        showtimes={session.showtimes}/>)}            
+            </Main>
         </>
     );
 }
