@@ -1,18 +1,19 @@
 import styled from "styled-components"
 
-export default function Button({text}){
+export default function Button({type, text}){
     return(
-        <Div>
+        <Btn type={type}>
             {text}
-        </Div>
+        </Btn>
     );
 }
 
-const Div = styled.div`
+const Btn = styled.button`
     width: 226px;
     height: 42px;
     background-color: #E8833A;
     border-radius: 3px;
+    border-style: none;
 
     display: flex;
     align-items: center;

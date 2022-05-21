@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 
-export default function Input({htmlFor, name, inputType, placeHolder}){
+export default function Input({htmlFor, name, inputType, placeHolder, value, setValue}){
     return(
         <Div>
             <label htmlFor={htmlFor}>{name}</label>
-            <input type={inputType} id={htmlFor} placeholder={placeHolder}/>
+            <input type={inputType} 
+                    id={htmlFor} 
+                    placeholder={placeHolder}
+                    value={value}
+                    onChange={e => {setValue(e.target.value)}}/>
         </Div>
     );
 }

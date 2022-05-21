@@ -2,12 +2,15 @@ import styled from "styled-components";
 import Seat from "../components/Seat";
 import Circle from "../components/Circle";
 
-export default function SeatsList({seatsList}){
+export default function SeatsList({seatsList, reservedSeats, setReservedSeats}){
     return(
         <>
             {seatsList.map((seat, index) => <Seat key={index}
+                                            id={seat.id}
                                             name={seat.name} 
-                                            isAvailable={seat.isAvailable}/>)}
+                                            isAvailable={seat.isAvailable}
+                                            rSeats={reservedSeats}
+                                            setRSeats={setReservedSeats}/>)}
             <Div>
                 <div>
                     <Circle bgColor={`#8DD7CF`} bdColor={`#45BDB0`}/>

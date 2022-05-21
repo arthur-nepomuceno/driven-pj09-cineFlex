@@ -13,6 +13,7 @@ body
             Seats (on)
                 Title (ok)
                 Main (on)
-                    Seat (on)
+                    Seat (ok)
+                    Form (on)
             Success
             Bottom

@@ -1,9 +1,6 @@
 ======================================================================================
 21/05/22
-======================================================================================
 Início: 13:19
-Fim: 14:46
-Total: 1:27
 ========== || ====================== || ========== || ========== || ========== || =====
 QQQ
 07. Escrever na tela o formulário para o comprador. -OK
@@ -13,34 +10,72 @@ QQQ
     - estilizar o formulário do jeito certo -OK
 
 PAUSA AQUI
+Fim: 15:08
+Total: 1:49
 =======================================================================================
 RETORNO
-Início: 
-Fim: 
-Total:
+Início: 17:43
+========== || ====================== || ========== || ========== || ========== || =====
+QQQ
+08. Ao clicar no botão, o que estiver escrito nos campos do formulário tem que sumir. -OK
+    - capturar os dados -ok
+        - escrever a variável que estado - ok
+        - combinar o setVariável da variável de estado com o onChange do input
+        para salvar os dados na variável - ok
 
-08. Ao clicar no botão, o que estiver escrito nos campos do formulário tem que sumir.
-    - os dados de um input são capturados em uma variável de estado, então a
-    primeira coisa é criar a variável de estado;    
-        SACADA:
-        - usar a propridade onChange={} do input associada à funçao que altera
-        a variável de estado para capturar os dados;
-        - aplicar o input controlado
+    - zerar os dados depois de apertar no botão de reservar assentos -ok
 
-    - zerar os dados depois de apertar no botão de reservar assentos
-        - escrever a função que vai zerar os dados
-        - essa função vai manipular as variáveis de estado, zerando os dados
+        IMPORTANTE:
+        - o button também precisa ser do tipo "submit" para funcionar -ok
+
+        - escrever a função que vai zerar os dados, que é a mesma função de envio -ok
+
+        - essa função vai manipular as variáveis de estado, zerando os dados -ok
+
         - essa função vai precisar acionar o "event.preventDefault()" para
         impedir o comportamento padrão de um formulário de re-carregar a página
-        após um submit (envio de dados);
+        após um submit (envio de dados); -ok
+
         - essa função será conectada ao formulário pela propriedade onSubmit={}
-        da tag <form>
-        - o button também precisa ser do tipo "submit" para funcionar
-        - nos próximos passos, essa é a função que fará também o envio
-        dos dados;
+        da tag <form> -ok
+    
+09. Registrar as informações dos assentos selecionados para serem enviadas.
+
+    - criar uma lista dos assentos selecionados
+        - precisa haver uma variável de estado que vai mudar 
+        conforme as seleções de assentos.-ok
+
+        - quem vai fazer essa mudança é a função de selecionar assento, já escrita
+        em Seat.js, ou seja, ela precisa ter acesso a função setVariável que altera
+        a variável de estado. -ok
+
+        - ao mesmo tempo, quem precisa ter acesso a essa variável é o formulário,
+        porque é ele que vai fazer o envio dos dados junto com o nome e o cpf do
+        comprador. -ok
+
+        CONCLUSÃO: criar a variável de estado em um componente que seja pai dos dois,
+        que nesse caso é Seats.js -ok
+
+PAUSA AQUI
+Fim: 19:12
+Total: 1:29
+=======================================================================================
+RETORNO
+Início:
+========== || ====================== || ========== || ========== || ========== || =====
+QQQ
+    DIFICULDADE DO MOMENTO:
+        - fazer com que ao clicar em um assento, o id vá para a lista de reservados
+        problemática: o assento só vai para a lista quando clico pela segunda vez
+        se a adição for durante a seleção, e pela terceira vez se a adição for
+        durante a desseleção
 
 
     
     - esse formulário precisará receber informações sobre os assentos
     - também precisará organizar todos os dados em um objeto só
     - esse objeto precisa ser enviado para um link de API
+
+FIM DO DIA
+Fim: 
+Total:

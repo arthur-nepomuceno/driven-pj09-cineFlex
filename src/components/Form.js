@@ -1,22 +1,40 @@
 import styled from "styled-components";
+import {useState} from "react";
 import Input from "./Input";
 import Button from "./Button"
 
-export default function Form(){
+export default function Form({reservedSeats}){
+    const [buyerName, setBuyerName] = useState("")
+    const [buyerCPF, setBuyerCPF] = useState("")
+
+    function sendRequest(event){
+        event.preventDefault();
+
+        
+
+
+        setBuyerName("");
+        setBuyerCPF("");
+    }
+
     return(
-        <Formulary>
+        <Formulary onSubmit={sendRequest}>
             <div>
                 <Input htmlFor={"nomeComprador"} 
                 name={"Nome do comprador:"} 
                 inputType={"text"}
-                placeHolder={"Digite seu nome..."}/>
+                placeHolder={"Digite seu nome..."}
+                value={buyerName}
+                setValue={setBuyerName}/>
 
                 <Input htmlFor={"cpfComprador"} 
                 name={"CPF do comprador:"} 
                 inputType={"text"}
-                placeHolder={"Digite seu cpf..."}/>
+                placeHolder={"Digite seu cpf..."}
+                value={buyerCPF}
+                setValue={setBuyerCPF}/>
             </div>
-            <Button text={`Reservar assentos(s)`}/>
+            <Button type={`submit`} text={`Reservar assentos(s)`}/>
         </Formulary>
     );
 }

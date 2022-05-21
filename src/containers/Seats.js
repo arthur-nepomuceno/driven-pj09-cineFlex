@@ -15,12 +15,17 @@ export default function Seats(){
         promise.then((element) => {setSeatsList(element.data.seats)})
     }, [])
 
+    const [rSeats, setRSeats] = useState([]);
+
     return(
         <>
             <Title title={`Selecione o(s) assento(s)`}/>
             <Main>             
-               <SeatsList seatsList={seatsList}/>
-               <Form />
+               <SeatsList seatsList={seatsList} 
+               reservedSeats={rSeats} 
+               setReservedSeats={setRSeats}/>
+
+               <Form reservedSeats={rSeats}/>
             </Main>
         </>
     );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {useState} from "react";
 
-export default function Seat({name, isAvailable}){
+export default function Seat({id, name, isAvailable, rSeats, setRSeats}){
     const blue = `#8DD7CF`;
     const bluer = `#45BDB0`;
     const yellow  = `#FBE192`;
@@ -18,10 +18,14 @@ export default function Seat({name, isAvailable}){
             setClick(true);
             setBgColor(blue);
             setBdColor(bluer);
+            console.log(`Assento ${id} selecionado.`)
+            
         } else if(isAvailable === true && click === true){
             setClick(false);
             setBgColor(gray);
             setBdColor(grayer);
+            console.log(`Assento ${id} desselecionado.`)
+
         } else if(isAvailable === false){
             alert("Esse assento não está disponível.")
         }
