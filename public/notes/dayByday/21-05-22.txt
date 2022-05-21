@@ -1,0 +1,46 @@
+======================================================================================
+21/05/22
+======================================================================================
+Início: 13:19
+Fim: 14:46
+Total: 1:27
+========== || ====================== || ========== || ========== || ========== || =====
+QQQ
+07. Escrever na tela o formulário para o comprador. -OK
+    - criar um componente separado para o input do formulário -OK
+        - usar label + input - OK
+    - criar um componente separado para alocar o formulário com os inputs -OK
+    - estilizar o formulário do jeito certo -OK
+
+PAUSA AQUI
+=======================================================================================
+RETORNO
+Início: 
+Fim: 
+Total:
+
+08. Ao clicar no botão, o que estiver escrito nos campos do formulário tem que sumir.
+    - os dados de um input são capturados em uma variável de estado, então a
+    primeira coisa é criar a variável de estado;    
+        SACADA:
+        - usar a propridade onChange={} do input associada à funçao que altera
+        a variável de estado para capturar os dados;
+        - aplicar o input controlado
+
+    - zerar os dados depois de apertar no botão de reservar assentos
+        - escrever a função que vai zerar os dados
+        - essa função vai manipular as variáveis de estado, zerando os dados
+        - essa função vai precisar acionar o "event.preventDefault()" para
+        impedir o comportamento padrão de um formulário de re-carregar a página
+        após um submit (envio de dados);
+        - essa função será conectada ao formulário pela propriedade onSubmit={}
+        da tag <form>
+        - o button também precisa ser do tipo "submit" para funcionar
+        - nos próximos passos, essa é a função que fará também o envio
+        dos dados;
+
+
+    
+    - esse formulário precisará receber informações sobre os assentos
+    - também precisará organizar todos os dados em um objeto só
+    - esse objeto precisa ser enviado para um link de API

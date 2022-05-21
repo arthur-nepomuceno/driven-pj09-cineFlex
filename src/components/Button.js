@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
-export default  function Button({text}){
+export default function Button({text}){
     return(
-        <Button>
+        <Div>
             {text}
-        </Button>
+        </Div>
     );
 }
 
-const Button = styled.div`
+const Div = styled.div`
     width: 226px;
     height: 42px;
     background-color: #E8833A;
@@ -21,5 +21,9 @@ const Button = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    color: #FFFFFF
+    color: #FFFFFF;
+
+    &:hover{
+        cursor: pointer;
+    }
 `

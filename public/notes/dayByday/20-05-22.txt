@@ -7,7 +7,9 @@ Total: 1:32
 ========== || ====================== || ========== || ========== || ========== || ====
 QQQ
 01. Criar o componente Seat.js. OK
+
 02. Importar esse componente dentro de Seats.js. OK
+
 03. Em Seats.js, realizar a requisição dos assentos usando o sessionID. -OK
     - importar o axios -ok
     - importar o useState para criar a variável de estado que vai receber
@@ -19,10 +21,12 @@ QQQ
     - invocar a função useEffect(()=>{}, []) -ok
     - usar essa desestruturação junto com o axios para buscar as informações
     dos assentos no próximo link de API -ok
+
 04. Exibir as informações conforme o layout fornecido.
     - em Seat.js, criar o layout redondo que vai receber o número de cada assento -ok
     - usar a função map junto com as informações dos assentos e o componente Seat
     para fazer todos os assentos aparecerem de uma vez só -ok
+    
 05. Escrever a função que seleciona um assento se ele estiver disponível. -ok
     - essa função vai estar no onClick={} de cada assento -ok
     - essa função vai depender do valor de isAvailable -ok
@@ -63,17 +67,3 @@ QQQ
     novo que recebe as cores como props em hexadecimal. Levei um bom tempo
     tentando manipular o componente do assento até decidir mudar de caminho.
 =======================================================================================
-Início: 
-Fim: 
-Total: 
-========== || ====================== || ========== || ========== || ========== || =====
-QQQ
-07. Escrever na tela o formulário para o comprador.
-    - criar um componente separado para o formulário
-    - usar a tag form
-    - usar label + input
-    - aplicar o input controlado
-    - zerar os dados depois de apertar no botão de reservar assentos
-    - esse formulário precisará receber informações sobre os assentos
-    - também precisará organizar todos os dados em um objeto só
-    - esse objeto precisa ser enviado para um link de API
