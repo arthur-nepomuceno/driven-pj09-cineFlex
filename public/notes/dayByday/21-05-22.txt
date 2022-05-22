@@ -61,21 +61,40 @@ Fim: 19:12
 Total: 1:29
 =======================================================================================
 RETORNO
-Início:
+Início: 20:10
 ========== || ====================== || ========== || ========== || ========== || =====
 QQQ
     DIFICULDADE DO MOMENTO:
-        - fazer com que ao clicar em um assento, o id vá para a lista de reservados
+        - fazer com que ao clicar em um assento, o id vá para a lista de reservados.
         problemática: o assento só vai para a lista quando clico pela segunda vez
         se a adição for durante a seleção, e pela terceira vez se a adição for
-        durante a desseleção
-
-
+        durante a desseleção.
     
-    - esse formulário precisará receber informações sobre os assentos
-    - também precisará organizar todos os dados em um objeto só
+    COMO RESOLVI:
+        - incializando uma variável, fazendo nela a atualização dos assentos e passando
+        ela como parâmetro setFunction responsável pela variável da lista dos assentos
+
+10. Montar o objeto que carregará as informações da reserva dos assentos.
+
+    - esse objeto deve ser montado no componente Form.js -ok
+        - esse objeto unirá dois trechos de informação: -ok
+            - nome e CPF do comprador; -ok
+            - lista dos assentos reservados (que está sendo passada como props) -ok
+
+    - escrever a função que valida o nome do comprador -ok
+        - não pode haver nome vazio e nem com números -ok
+    - escrever a função que valida o cpf do comprador -ok
+        - só pode haver números e tem que ter 11 dígitos -ok
+    - escrever a função que verifica se há reserva feitas -ok
+        - a lista de reservas não pode estar vazia -ok
+    
+    - o objeto só é montado se as trẽs validações retornam true; -ok
+    
+    - preciso salvar o nome(número) dos assentos também, para mostrar na
+    tela de sucesso - ok
+
     - esse objeto precisa ser enviado para um link de API
 
-FIM DO DIA
+PAUSA AQUI
 Fim: 
 Total:
