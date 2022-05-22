@@ -33,12 +33,29 @@ Fim: 16:39
 Total: 0:35
 =======================================================================================
 RETORNO
-Início: 
+Início: 17:56
 ========== || ====================== || ========== || ========== || ========== || =====
-01. C riar o layout conforme modelo.
-    - criar um componente genérico que seja organizado da seguinte forma
-            -um título
-            -dois parágrafos com texto & informação
-                -sendo que esse parágrado também um componente a mais
-                importado dentro desse componente genérico
-02. Exibir as informações dos pedidos corretamente.
+01. Criar o layout conforme modelo. -OK
+    - criar um componente genérico para cada tipo de dado exibido -ok
+        - filme, ingresso e comprador -ok
+
+02. Criar o botão que leva para home -OK
+    -usar o useNavigate e disparar no onClick do botão. -ok
+
+03. Exibir as informações dos pedidos corretamente.
+    - MovieData.js precisa receber o nome, o horário e a data do filme
+    - TicketData.js precisa receber o número dos ASSENTOS
+    - BuyerData.js precisa receber o nome e cpf de cada comprador
+        - TUDO ISSO implica que Success.js conheça todas essas variáveis
+        - ou seja, a primeira coisa é fazer com que essas variáveis de
+        estado existam em um componente pai comum, que nesse caso é App.js
+        - portanto, o próximo passo é passar as variáveis de estado
+        que estão nos componentes indepentes para o componente pai, App.js
+
+PAUSA AQUI
+Fim: 19:39
+Total: 1:43
+=======================================================================================
+RETORNO
+Início:
+========== || ====================== || ========== || ========== || ========== || =====

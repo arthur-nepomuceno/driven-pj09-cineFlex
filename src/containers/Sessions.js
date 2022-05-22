@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Title from "../components/Title";
 import Session from "../components/Session";
-import Main from "../components/Main"
+import Main from "../components/Main";
+import Bottom from "./Bottom";
 
 
 export default function Sessions(){
@@ -23,6 +24,7 @@ export default function Sessions(){
                                                         date={session.date}
                                                         showtimes={session.showtimes}/>)}            
             </Main>
+            <Bottom />
         </>
     );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export default function Movie({id, src}){
+export default function Movie({id, src, name, date}){
     return(
         <Figure>
             <Link to={`/sessions/${id}`}>

@@ -5,6 +5,7 @@ import Title from "../components/Title";
 import Main from "../components/Main";
 import SeatsList from "../components/SeatsList";
 import Form from "../components/Form";
+import Bottom from "./Bottom";
 
 
 export default function Seats(){
@@ -27,6 +28,7 @@ export default function Seats(){
 
                <Form reserve={reserve}/>
             </Main>
+            <Bottom />
         </>
     );
 }
