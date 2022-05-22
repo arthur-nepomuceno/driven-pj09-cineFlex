@@ -1,0 +1,44 @@
+======================================================================================
+================================================================= 22/05/2022 - Domingo
+Início: 16:04
+========== || ====================== || ========== || ========== || ========== || =====
+QQQ
+13. A rota só pode mudar se a reserva estiver toda validada.
+    - a mudança de rota também tem que depender da validação do pedido.
+    COMO FAZER ISSO?
+    POSSIBILIDADES:
+    
+    a) Adicionar uma variável de condição na renderização da rota;
+        não está funcionando porque a renderização da rota continua acontecendo antes
+        do submit do formulário, e eu preciso qu ela só aconteça depois.
+
+    b) Usar um <Reditect to="" /> dentro do promise.then;
+        -isso requer importar o Reditect do react-router-dom
+        não achei o Redirect dentro da lib do react-router-dom.
+        talvez não exista mais.
+
+    c) Usar o useNavigate.
+        -isso requer importar o useNavigate do react-router-dom
+        -FUNCIONOU PERFEITAMENTE!
+        depois de importar o useNavigate, preciso inicializar ele
+        dentro de uma variável.
+        DETALHE: se for dentro de uma funçao do componente, dá problema.
+        tem que ser dentro do espaço de rotina do componente.
+        depois é só chamar variavel("rota") dentro da parte lógica do
+        componente e a navegação vai acontecer como uma etapa comum
+        da rotina.
+
+PAUSA AQUI - FIM DA SELEÇÃO DE ASSENTOS
+Fim: 16:39
+Total: 0:35
+=======================================================================================
+RETORNO
+Início: 
+========== || ====================== || ========== || ========== || ========== || =====
+01. C riar o layout conforme modelo.
+    - criar um componente genérico que seja organizado da seguinte forma
+            -um título
+            -dois parágrafos com texto & informação
+                -sendo que esse parágrado também um componente a mais
+                importado dentro desse componente genérico
+02. Exibir as informações dos pedidos corretamente.

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import axios from "axios";
 import {useState} from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Input from "./Input";
 import Button from "./Button"
 
 export default function Form({reserve}){
+    const navigate = useNavigate();
     const [buyerName, setBuyerName] = useState("");
     const [buyerCPF, setBuyerCPF] = useState("");
 
@@ -56,7 +57,7 @@ export default function Form({reserve}){
                 const request = {ids:reserveIds, name: buyerName, cpf: buyerCPF};
                 const promise = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many",
                                             request)
-                promise.then(response => console.log(response));
+                promise.then(() => navigate(`/success`));
                 promise.catch(response => console.log(response));
 
                 console.log(request);
@@ -85,7 +86,7 @@ export default function Form({reserve}){
                 value={buyerCPF}
                 setValue={setBuyerCPF}/>
             </div>
-            <Button type={`submit`} text={`Reservar assentos(s)`}/>                    
+            <Button type={`submit`} text={`Reservar assentos(s)`}/>                                
         </Formulary>
     );
 }
