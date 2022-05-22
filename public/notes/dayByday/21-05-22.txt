@@ -93,8 +93,37 @@ QQQ
     - preciso salvar o nome(número) dos assentos também, para mostrar na
     tela de sucesso - ok
 
-    - esse objeto precisa ser enviado para um link de API
-
 PAUSA AQUI
-Fim: 
-Total:
+Fim: 21:25
+Total: 1:15
+=======================================================================================
+RETORNO
+Início: 23:08
+========== || ====================== || ========== || ========== || ========== || =====
+QQQ
+11. Enviar o pedido para o servidor. -OK
+    - montar a requisição de POST para o servidor -ok
+        - importar o axios no componente Form.js -ok
+        - dessa não preciso do useEffect. por que? porque o envio
+        só acontece ao clicar do botão do formulário, e não no carregamento
+        do componente, como era antes.
+
+12. Acessar a rota de sucesso ao enviar o pedido. -OK
+    - vou precisar do Link to conectado ao botão de reserva de assentos.-ok
+        - importar {Link} -ok
+    - vou precisar especificar essa rota em App.js -ok
+        - especificar "path" para a rota que eu quero e "element" para 
+        o componente que eu quero encontrar lá, que nesse caso é a tela
+        de sucesso contendo as informações do pedido -ok
+    - criar o componente Success.js -ok
+
+13. A rota só pode mudar se a reserva estiver toda validada.
+    - a mudança de rota também tem que depender da validação do pedido.
+    COMO FAZER ISSO?
+
+
+FIM DO DIA
+Fim: 01:24
+Total: 2:16
+======================================================================================
+

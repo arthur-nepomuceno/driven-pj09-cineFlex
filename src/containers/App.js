@@ -5,6 +5,7 @@ import Top from "./Top";
 import Movies from "./Movies";
 import Sessions from "./Sessions";
 import Seats from "./Seats";
+import Success from "./Success";
 
 
 export default function App(){
@@ -15,6 +16,7 @@ export default function App(){
                 <Route path="/" element={<Movies/>}/>
                 <Route path="/sessions/:movieID" element={<Sessions/>}/>
                 <Route path="/seats/:sessionID" element={<Seats/>}/>
+                <Route path="/success" element={<Success/>}/>
             </Routes>
         </BrowserRouter>
     );

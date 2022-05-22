@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 export default function Showtime({time, id}){
     return(
-        <Link to={`/seats/${id}`} >
+        <Link to={`/seats/${id}`} style={{textDecoration: 'none'}} >
             <DIV>
                 <p>{time}</p>
             </DIV>

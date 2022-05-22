@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import axios from "axios";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 import Input from "./Input";
 import Button from "./Button"
 
@@ -48,8 +50,18 @@ export default function Form({reserve}){
 
         if(isReserveValid(reserve)){
             if(isNameValid(buyerName) && isCPFValid(buyerCPF)){
-                const request = {ids:reserve, name: buyerName, cpf: buyerCPF};
+                const reserveIds = reserve.map(reserve => reserve.id);
+                const reserveSeats = reserve.map(reserve => reserve.number);
+
+                const request = {ids:reserveIds, name: buyerName, cpf: buyerCPF};
+                const promise = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many",
+                                            request)
+                promise.then(response => console.log(response));
+                promise.catch(response => console.log(response));
+
                 console.log(request);
+                console.log(reserveIds);
+                console.log(reserveSeats);
                 setBuyerName("")
                 setBuyerCPF("");
             }
@@ -73,14 +85,16 @@ export default function Form({reserve}){
                 value={buyerCPF}
                 setValue={setBuyerCPF}/>
             </div>
-            <Button type={`submit`} text={`Reservar assentos(s)`}/>
+            <Button type={`submit`} text={`Reservar assentos(s)`}/>                    
         </Formulary>
     );
 }
 
 const Formulary = styled.form`
-    margin-top: 40px;
     height: 256px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
 
     display: flex;
     flex-direction: column;
