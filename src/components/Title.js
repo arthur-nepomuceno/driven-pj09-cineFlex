@@ -20,7 +20,5 @@ const H1 = styled.h1`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 1px dashed black;
 `
 

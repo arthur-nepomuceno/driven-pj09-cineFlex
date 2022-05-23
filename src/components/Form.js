@@ -64,14 +64,10 @@ export default function Form({reserve, movieTitle, movieDate, movieHour}){
                 }
 
                 const request = {ids:reserveIds, name: buyerName, cpf: buyerCPF};
-                const promise = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many",
-                                            request)
+                const promise = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many", request)
                 promise.then(() => {navigate("/success", {state: buyInfo})});
                 promise.catch(response => console.log(response));
 
-                console.log(request);
-                console.log(reserveIds);
-                console.log(reserveSeats);
                 setBuyerName("")
                 setBuyerCPF("");
             }

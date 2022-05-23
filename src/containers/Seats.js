@@ -26,7 +26,7 @@ export default function Seats(){
             setMoviePoster(element.data.movie.posterURL)
             setMovieWeekday(element.data.day.weekday)
             setMovieDate(element.data.day.date)
-            setMovieHour(element.data.name)})}, [])
+            setMovieHour(element.data.name);})}, [])
     
     const [reserve, setReserve] = useState([]);
 

@@ -13,6 +13,10 @@ export default function Success(){
     const buyInfo = location.state;
     const {title, date, hour, seatNumbers, buyerName, buyerCPF} = buyInfo;
 
+    function formatCPF(cpf){
+        return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
+    }
+
     return(
         <>
             <Title title={`Pedido feito com sucesso!`} fontWeight={`700`} color={`#247A6B`}/>
@@ -27,7 +31,7 @@ export default function Success(){
 
                     <BuyerData title={`Comprador(a)`} 
                                 name={buyerName} 
-                                cpf={buyerCPF}/>
+                                cpf={formatCPF(buyerCPF)}/>
 
                     <Button type={`button`} text={`Voltar para Home`} onClick={() => navigate("/")}/>
                 </Div>

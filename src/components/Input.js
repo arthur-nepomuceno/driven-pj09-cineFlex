@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export default function Input({htmlFor, name, inputType, placeHolder, value, setValue}){
     return(
         <Div>

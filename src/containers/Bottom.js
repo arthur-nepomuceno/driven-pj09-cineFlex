@@ -26,8 +26,6 @@ const Section = styled.section`
 
     display: flex;
     align-items: center;
-
-    border: 1px dashed black;
 `
 
 const Figure = styled.figure`
@@ -40,7 +38,6 @@ const Figure = styled.figure`
     justify-content: center;
 
     background-color: white;
-    border: 1px dashed black;
 
     img {
         width: 48px;

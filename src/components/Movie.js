@@ -20,8 +20,6 @@ const Figure = styled.figure`
     align-items: center;
     justify-content: center;
 
-    border: 1px dashed black;
-
     img {
         max-width: 130px;
         max-height: 192px;

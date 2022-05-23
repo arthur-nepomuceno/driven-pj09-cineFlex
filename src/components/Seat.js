@@ -28,7 +28,7 @@ export default function Seat({id, name, isAvailable, reserve, setReserve}){
             setBgColor(gray);
             setBdColor(grayer);
 
-            const reserveSeats = reserve.filter(r => r.id != id);
+            const reserveSeats = reserve.filter(r => r.id !== id);
             setReserve(reserveSeats);
 
         } else if(isAvailable === false){
