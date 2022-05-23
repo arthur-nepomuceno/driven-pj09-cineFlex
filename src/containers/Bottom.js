@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Text from "../components/Text";
 
-export default function Bottom({src, name, date}){
+export default function Bottom({src, title, date}){
     return(
         <Section>
             <Figure>
                 <img src={src} alt="movie cover"></img>
             </Figure>
             <div>
-                <Text text={"Enola Holmes"}/>
-                <Text text={"Quinta-feira 15:00"}/>
+                <Text text={title}/>
+                <Text text={date}/>
             </div>
         </Section>
     );
@@ -39,6 +39,7 @@ const Figure = styled.figure`
     align-items: center;
     justify-content: center;
 
+    background-color: white;
     border: 1px dashed black;
 
     img {

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Text from "./Text";
 
-export default function TicketData({title, seatNumber}){
+export default function TicketData({title, seatNumbers}){
     return( 
         <Div>
             <h1>
                 {title}
             </h1>
-            <Text text={`Assento ${seatNumber}`}/>
+            {seatNumbers.map((number, index) => <Text key={index} text={`Assento ${number}`}/>)}            
         </Div>
     );
 }

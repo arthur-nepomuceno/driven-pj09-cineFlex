@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Input from "./Input";
 import Button from "./Button"
 
-export default function Form({reserve}){
+export default function Form({reserve, movieTitle, movieDate, movieHour}){
     const navigate = useNavigate();
     const [buyerName, setBuyerName] = useState("");
     const [buyerCPF, setBuyerCPF] = useState("");
@@ -54,10 +54,19 @@ export default function Form({reserve}){
                 const reserveIds = reserve.map(reserve => reserve.id);
                 const reserveSeats = reserve.map(reserve => reserve.number);
 
+                const buyInfo= {
+                    title: movieTitle,
+                    date: movieDate,
+                    hour: movieHour,
+                    seatNumbers: reserveSeats,
+                    buyerName: buyerName,
+                    buyerCPF: buyerCPF
+                }
+
                 const request = {ids:reserveIds, name: buyerName, cpf: buyerCPF};
                 const promise = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many",
                                             request)
-                promise.then(() => navigate(`/success`));
+                promise.then(() => {navigate("/success", {state: buyInfo})});
                 promise.catch(response => console.log(response));
 
                 console.log(request);

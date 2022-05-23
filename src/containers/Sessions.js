@@ -7,7 +7,7 @@ import Main from "../components/Main";
 import Bottom from "./Bottom";
 
 
-export default function Sessions(){
+export default function Sessions({buy}){
     const {movieID} = useParams();
     const [sessions, setSessions] = useState([]);
     useEffect(() => {

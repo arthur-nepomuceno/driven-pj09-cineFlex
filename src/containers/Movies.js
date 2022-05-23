@@ -16,8 +16,7 @@ export default function Movies(){
                 {movieList.map((movie, index) => <Movie key={index}
                                                         id={movie.id}
                                                         src={movie.posterURL}
-                                                        name={movie.title}
-                                                        date={movie.releaseDate}/>)}   
+                                                        name={movie.title}/>)}   
             </Main>
             
         </>

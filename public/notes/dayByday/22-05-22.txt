@@ -32,7 +32,8 @@ PAUSA AQUI - FIM DA SELEÇÃO DE ASSENTOS
 Fim: 16:39
 Total: 0:35
 =======================================================================================
-RETORNO
+=======================================================================================
+RETORNO - INÍCIO DA TELA DE SUCESSO
 Início: 17:56
 ========== || ====================== || ========== || ========== || ========== || =====
 01. Criar o layout conforme modelo. -OK
@@ -46,16 +47,32 @@ Início: 17:56
     - MovieData.js precisa receber o nome, o horário e a data do filme
     - TicketData.js precisa receber o número dos ASSENTOS
     - BuyerData.js precisa receber o nome e cpf de cada comprador
-        - TUDO ISSO implica que Success.js conheça todas essas variáveis
-        - ou seja, a primeira coisa é fazer com que essas variáveis de
-        estado existam em um componente pai comum, que nesse caso é App.js
-        - portanto, o próximo passo é passar as variáveis de estado
-        que estão nos componentes indepentes para o componente pai, App.js
 
 PAUSA AQUI
 Fim: 19:39
 Total: 1:43
 =======================================================================================
+=======================================================================================
 RETORNO
-Início:
+Início: 20:39
 ========== || ====================== || ========== || ========== || ========== || =====
+QQQ
+03. Exibir as informações dos pedidos corretamente. -OK
+    - usar uma combinação de useNavigate com useLocation para transferir as informações
+    da tela de seleção de assentos para a tela de sucesso
+    - informações que eu preciso exibir na tela de sucesso:
+        título do filme
+        data do filme
+        hora do filme
+        numero dos assentos
+        nome do comprador
+        cpf do comprador
+
+    A INFORMAÃO QUE FEZ A DIFERENÇA:
+    - usar o useLocation combninado com o useNavigate para passar
+    as informações de uma tela para outra.
+
+FIM DO DIA
+Fim: 23:25
+Total: 2:46
+=======================================================================================

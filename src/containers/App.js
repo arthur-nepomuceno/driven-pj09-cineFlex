@@ -6,12 +6,8 @@ import Movies from "./Movies";
 import Sessions from "./Sessions";
 import Seats from "./Seats";
 import Success from "./Success";
-import { useState } from "react";
 
 export default function App(){
-    const [value, setValue] = useState([]);
-
-
     return(
         <BrowserRouter>
             <Top/>
