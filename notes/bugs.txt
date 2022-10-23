@@ -1,0 +1,2 @@
+1. Fix input "Nome do Comprador" at end-point "seats"
+    - the name isn't being accepeted.
